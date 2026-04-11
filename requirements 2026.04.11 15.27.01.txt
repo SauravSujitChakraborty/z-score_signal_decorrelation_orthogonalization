@@ -1,0 +1,14 @@
+NumPy (numpy): 
+
+​Used for generating the synthetic correlated signal distributions.
+
+​Powers the core Linear Algebra engine (np.linalg.inv) to invert the covariance matrix.
+
+​Handles the vector-matrix multiplication (@ operator) for signal aggregation.
+
+​Pandas (pandas): 
+
+​Used for structured data manipulation.
+
+​While the current core logic is NumPy-based, Pandas is required for real-world "Quant" workflows where signals are indexed by timestamps and asset tickers.
+
