@@ -1,2 +1,50 @@
 # z-score_signal_decorrelation_orthogonalization
+
 Solving Multi-collinearity in Alpha Signals using Linear Algebra Orthogonalization 
+
+Introduction 
+
+In Quantitative Finance, Alpha Centrality is a major risk. When multiple trading signals (e.g., two different Momentum indicators) are highly correlated, a simple average leads to "Double Counting." This project utilizes the Inverse Covariance Matrix to mathematically orthogonalize signals, ensuring each input provides unique information to the final forecast and penalizing redundancy.
+
+ Mathematical Core
+ 
+1. The Multi-Collinearity Problem
+   
+When two signals $x_1$ and $x_2$ have a high correlation ($\rho \approx 0.8$), they share a significant amount of variance. In a vector space, they are separated by a very small angle.
+If we weigh them equally (0.5, 0.5), we are essentially betting twice on the same underlying market driver, which artificially inflates risk without increasing expected return.
+
+2. The Precision Matrix ($\Sigma^{-1}$)
+   
+To remove noise from these signals, we calculate the Covariance Matrix ($\Sigma$) of the signal Z-scores. It becomes quite interesting when we invert this matrix to get the Precision Matrix:
+
+$\text{Precision Matrix} = \Sigma^{-1}$
+
+
+3. Optimal Weight Derivation
+   
+​We derive the weights by multiplying the Precision Matrix by a vector of ones ($\mathbf{1}$):
+
+$$ w_{opt} = \frac{\Sigma^{-1} \mathbf{1}}{\mathbf{1}^T \Sigma^{-1} \mathbf{1}} $$
+
+Logic: The inversion process identifies which signals "overlap" in information.
+
+Result: Signals that are highly correlated with others are penalized (assigned lower weights), while signals that provide unique, independent information are prioritized.
+
+Technicalities
+
+Synthetic Alpha Generation: We simulate three Z-score signals where Signal 1 and Signal 2 are 80% correlated (Redundant Momentum) and Signal 3 is independent (Unique Value).
+
+Covariance Estimation: Using $np.cov()$, we capture the relationship structure between the alpha sources.
+
+Orthogonalization: We apply $np.linalg.inv()$ to the covariance matrix to find the "orthogonal" weights.
+
+Normalization: We normalize the weights using the absolute sum to ensure the final aggregated signal remains an interpretable Z-score.
+
+Conclusion 
+ 
+As seen in the output, Signal 2 was penalized relative to Signal 1 because it offered almost no "new" information. This process effectively rotates the signal vectors into an orthogonal space where each component is independent.
+
+This is a simplified version of the Rotated Component method or Principal Component Analysis (PCA) weighting, designed for robust multi-factor model construction.
+
+
+
