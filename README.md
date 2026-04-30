@@ -68,12 +68,15 @@ Installation & Packages Required
 
 Cloning the repository :-
 
+```bash
 git clone https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation_orthogonalization.git
+```
 
 Installing the dependencies :-
 
+```bash
 pip -r requirements.txt
-
+```
 
 
 
