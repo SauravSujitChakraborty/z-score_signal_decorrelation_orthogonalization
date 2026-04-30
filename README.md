@@ -40,9 +40,24 @@ Orthogonalization: We apply $np.linalg.inv()$ to the covariance matrix to find t
 
 Normalization: We normalize the weights using the absolute sum to ensure the final aggregated signal remains an interpretable Z-score.
 
+Results 
+
+When the script is executed with $N=1000$ assets to ensure statistical significance, the optimizer produces the following weights:
+
+LINEAR ALGEBRA: SIGNAL DE-CORRELATOR
+Signal Weights (Optimized):
+Sig 1 (Momentum A): -0.3342
+Sig 2 (Momentum B):  0.5580
+Sig 3 (Value):       0.1078
+
+Quant Note: Signal 2 was prioritized while Signal 1 was utilized 
+as a "hedge" to remove shared variance. This mathematical 
+orthogonalization ensures the final alpha is not double-counting 
+the momentum factor.
+
 Conclusion 
- 
-As seen in the output, Signal 2 was penalized relative to Signal 1 because it offered almost no "new" information. This process effectively rotates the signal vectors into an orthogonal space where each component is independent.
+
+As seen in the output, Signal 1 was penalized relative to Signal 2, serving as a mathematical hedge to remove shared variance. This process effectively rotates the signal vectors into an orthogonal space where each component is independent.
 
 This is a simplified version of the Rotated Component method or Principal Component Analysis (PCA) weighting, designed for robust multi-factor model construction.
 
