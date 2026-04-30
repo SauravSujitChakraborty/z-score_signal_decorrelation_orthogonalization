@@ -47,9 +47,11 @@ $$ w_{opt} = \frac{\Sigma^{-1} \mathbf{1}}{\mathbf{1}^T \Sigma^{-1} \mathbf{1}} 
 
  => Signal Weights (Optimized):
 
- => Sig 1 (Momentum A): -0.3342
- => Sig 2 (Momentum B):  0.5580
- => Sig 3 (Value):       0.1078
+    Sig 1 (Momentum A): -0.3342
+ 
+    Sig 2 (Momentum B):  0.5580
+    
+    Sig 3 (Value):       0.1078
 
  => Quant Note: Signal 2 was prioritized while Signal 1 was utilized 
 as a "hedge" to remove shared variance. This mathematical 
