@@ -30,4 +30,4 @@ print(f"Sig 2 (Momentum B): {combined_weights[1]:.4f}")
 print(f"Sig 3 (Value):      {combined_weights[2]:.4f}")
 print("-" * 45)
 print("Note: Signal 2 was penalized due to high correlation with Signal 1.")
-print("This prevents 'Double Counting' the same alpha source."){
+print("This prevents 'Double Counting' the same alpha source.")
