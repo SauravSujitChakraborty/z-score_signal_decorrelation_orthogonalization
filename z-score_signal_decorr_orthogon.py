@@ -1,10 +1,9 @@
 import numpy as np
-import pandas as pd
 
 # 1. GENERATE RAW CORRELATED SIGNALS
 # Imagine Signal 1 and 2 are 80% correlated (both are types of Momentum)
 np.random.seed(42)
-n_assets = 10
+n_assets = 1000
 sig_1 = np.random.normal(0, 1, n_assets)
 sig_2 = sig_1 * 0.8 + np.random.normal(0, 0.2, n_assets) # Highly correlated
 sig_3 = np.random.normal(0, 1, n_assets)                # Independent (e.g., Value)
