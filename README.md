@@ -66,11 +66,18 @@ the momentum factor.
 
 Installation & Packages Required
 
-Cloning the repository :-
+==> Cloning the repository :-
 
 ```bash
-git clone https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation_orthogonalization.git
+git clone https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation_orthogonalization.git && cd z-score_signal_decorrelation_orthogonalization
 ```
+==> Create and activate environment :-
+
+python -m venv venv
+# On macOS/Linux:
+source venv/bin/activate  
+# On Windows:
+venv\Scripts\activate
 
 Installing the dependencies :-
 
@@ -78,7 +85,9 @@ Installing the dependencies :-
 pip -r requirements.txt
 ```
 
+==> Running the Z-Score Corr.Orthogonali. Project:-
 
+python z-score_sig_decorr_orthogonali.py
 
 
 
