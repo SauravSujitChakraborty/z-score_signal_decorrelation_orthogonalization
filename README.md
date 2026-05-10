@@ -73,11 +73,13 @@ git clone https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation
 ```
 ==> Create and activate environment :-
 
+```bash
 python -m venv venv
 # On macOS/Linux:
 source venv/bin/activate  
 # On Windows:
 venv\Scripts\activate
+```
 
 Installing the dependencies :-
 
@@ -87,7 +89,8 @@ pip -r requirements.txt
 
 ==> Running the Z-Score Corr.Orthogonali. Project:-
 
+```bash
 python z-score_sig_decorr_orthogonali.py
-
+```
 
 
