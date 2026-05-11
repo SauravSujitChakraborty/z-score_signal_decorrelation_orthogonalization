@@ -58,6 +58,8 @@ as a "hedge" to remove shared variance. This mathematical
 orthogonalization ensures the final alpha is not double-counting 
 the momentum factor.
 
+![Output](z-scor_sig_de-corr_orthogonali.jpg)
+
 ==> Conclusion 
 
  => As seen in the output, Signal 1 was penalized relative to Signal 2, serving as a mathematical hedge to remove shared variance. This process effectively rotates the signal vectors into an orthogonal space where each component is independent.
