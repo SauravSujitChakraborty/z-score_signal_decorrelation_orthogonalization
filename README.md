@@ -66,9 +66,9 @@ the momentum factor.
 
 => This is a simplified version of the Rotated Component method or Principal Component Analysis (PCA) weighting, designed for robust multi-factor model construction.
 
-Installation & Packages Required
+8. Installation & Packages Required
 
-==> Cloning the repository :-
+==> You can view the source code on the [z-score_signal_decorrelation_orthogonalization](https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation_orthogonalization.git) page, or run the following commands to install it locally:
 
 ```bash
 git clone https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation_orthogonalization.git && cd z-score_signal_decorrelation_orthogonalization
@@ -83,7 +83,7 @@ source venv/bin/activate
 venv\Scripts\activate
 ```
 
-Installing the dependencies :-
+==> Installing the dependencies :-
 
 ```bash
 pip -r requirements.txt
