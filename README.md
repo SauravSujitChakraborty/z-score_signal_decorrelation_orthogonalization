@@ -1,6 +1,6 @@
 # z-score_signal_decorrelation_orthogonalization
 
-Rhis project was made by me during July 2017- July 2018, preserved and finally publsihed on June 9, 2026
+Rhis project was made by me during July 2025, preserved and finally publsihed on June 9, 2026
 
 Solving Multi-collinearity in Alpha Signals using Linear Algebra Orthogonalization 
 
