@@ -67,6 +67,17 @@ the momentum factor.
  => As seen in the output, Signal 1 was penalized relative to Signal 2, serving as a mathematical hedge to remove shared variance. This process effectively rotates the signal vectors into an orthogonal space where each component is independent.
 
  => This is a simplified version of the Rotated Component method or Principal Component Analysis (PCA) weighting, designed for robust multi-factor model construction.
+ 
+ 8. Core Packages :-
+
+==> NumPy (Core Framework): Utilized for fast, multi-dimensional array operations and synthesizing synthetic alpha asset distributions using `np.random.normal`. It enables seamless vertical stacking (`np.vstack`) of continuous financial signals into a single unified data matrix.
+
+==> NumPy (Covariance Analysis): Employed via `np.cov` to compute the statistical sample covariance matrix of the multi-asset signal matrix. This step dynamically evaluates the linear interdependencies and spatial alignment between highly overlapping alpha sources (such as redundant Momentum strategies).
+
+==> NumPy (Linear Algebra - `linalg.inv`): Harnesses the `np.linalg.inv` algorithm to compute the inverse of the covariance matrix (the precision/concentration matrix). This serves as the mathematical foundation of the de-decorrelation engine, isolating conditional dependencies and stripping away overlapping variations.
+
+==> NumPy (Vectorized Matrix Multiplication): Leverages the high-performance matrix-vector dot product operator (`@`) to collapse the optimized weight allocations across the signal space simultaneously. This produces a single, vectorized, aggregate Z-score output across the entire asset universe while bypassing slow iterative Python loops.
+
 
 8. Installation & Packages Required
 
