@@ -66,14 +66,13 @@ the momentum factor.
 
  => As seen in the output, Signal 1 was penalized relative to Signal 2, serving as a mathematical hedge to remove shared variance. This process effectively rotates the signal vectors into an orthogonal space where each component is independent.
 
-=> This is a simplified version of the Rotated Component method or Principal Component Analysis (PCA) weighting, designed for robust multi-factor model construction.
+ => This is a simplified version of the Rotated Component method or Principal Component Analysis (PCA) weighting, designed for robust multi-factor model construction.
 
 8. Installation & Packages Required
 
-==> You can view the source code on the [z-score_signal_decorrelation_orthogonalization](https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation_orthogonalization.git) page, or run the following commands to install it locally:
-
 ```bash
-git clone https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation_orthogonalization.git && cd z-score_signal_decorrelation_orthogonalization
+git clone https://github.com/SauravSujitChakraborty/z-score_signal_decorrelation_orthogonalization.git
+cd z-score_signal_decorrelation_orthogonalization
 ```
 ==> Create and activate environment :-
 
@@ -88,7 +87,7 @@ venv\Scripts\activate
 ==> Installing the dependencies :-
 
 ```bash
-pip -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ==> Running the Z-Score Corr.Orthogonali. Project:-
